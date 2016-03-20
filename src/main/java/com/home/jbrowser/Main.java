@@ -32,20 +32,13 @@ public class Main {
     System.out.println("ENV is " + env);
     try {
 
-      // You can optionally pass a Settings object here,
-      // constructed using Settings.Builder
       driver = new JBrowserDriver();
 
-      // This will block for the page load and any
-      // associated AJAX requests
+/*
       driver.get("https://github.com/MachinePublishers/jBrowserDriver/issues");
 
-/*
-      driver.findElement(By.id("lst-ib")).sendKeys("robot");
-      driver.findElement(By.xpath("/*/
-/*[@name='btnK']")).click();
-*/
       driver.findElements(By.xpath("//li//a[contains(@class, 'issue-title-link')]")).stream().map(WebElement::getText).forEach(System.out::println);
+*/
     } finally {
       driver.quit();
     }
