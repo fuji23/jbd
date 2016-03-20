@@ -5,6 +5,9 @@ import com.machinepublishers.jbrowserdriver.Settings;
 import com.machinepublishers.jbrowserdriver.Timezone;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -14,8 +17,18 @@ import java.util.stream.Collectors;
  */
 public class Main {
 
-  public static void main(String[] args) {
+  String env;
+
+  @BeforeClass
+  @Parameters("env")
+  public void before(String env){
+    this.env = env;
+  }
+
+  @Test
+  public void test1() {
     JBrowserDriver driver = null;
+    System.out.println(env);
     try {
 
       // You can optionally pass a Settings object here,
