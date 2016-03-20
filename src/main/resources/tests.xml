@@ -2,11 +2,11 @@
 
 <suite name="My suite" parallel="tests" thread-count="4">
 
-    <test name="post cond">
+    <test name="test1">
         <classes>
-            <class name="grid.testng.learn.tests.TestA">
+            <class name="com.home.jbrowser.Main">
                 <methods>
-                    <include name="postcondition"/>
+                    <include name="test1"/>
                 </methods>
             </class>
         </classes>

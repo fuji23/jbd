@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <xmlFile></xmlFile>
+        <xmlFile>.\src\main\resources\tests.xml</xmlFile>
     </properties>
 
     <build>

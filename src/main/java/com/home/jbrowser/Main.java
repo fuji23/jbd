@@ -6,6 +6,7 @@ import com.machinepublishers.jbrowserdriver.Timezone;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -21,14 +22,14 @@ public class Main {
 
   @BeforeClass
   @Parameters("env")
-  public void before(String env){
+  public void before(@Optional(value = "QA19") String env){
     this.env = env;
   }
 
   @Test
   public void test1() {
     JBrowserDriver driver = null;
-    System.out.println(env);
+    System.out.println("ENV is " + env);
     try {
 
       // You can optionally pass a Settings object here,
