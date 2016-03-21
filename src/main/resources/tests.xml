@@ -5,9 +5,11 @@
     <test name="test1">
         <classes>
             <class name="com.home.jbrowser.Main">
+<!--
                 <methods>
                     <include name="test1"/>
                 </methods>
+-->
             </class>
         </classes>
     </test>

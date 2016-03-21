@@ -5,6 +5,7 @@ import com.machinepublishers.jbrowserdriver.Settings;
 import com.machinepublishers.jbrowserdriver.Timezone;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
@@ -24,7 +25,7 @@ public class Main {
 
   @BeforeClass
   @Parameters({"env", "param"})
-  public void before(@Optional(value = "") String env, @Optional(value = "") String param){
+  public void before(@Optional(value = "") String env, @Optional(value = "") String param) {
     this.env = env;
     this.param = param;
   }
@@ -41,9 +42,16 @@ public class Main {
       driver.get("https://github.com/MachinePublishers/jBrowserDriver/issues");
 
       driver.findElements(By.xpath("//li//a[contains(@class, 'issue-title-link')]")).stream().map(WebElement::getText).forEach(System.out::println);
+
+      Assert.assertTrue(true, "Test 1 is pass");
+
     } finally {
       driver.quit();
     }
   }
 
+  @Test
+  public void test2() {
+    Assert.assertTrue(true, "Test 2 is fail");
+  }
 }
