@@ -52,6 +52,6 @@ public class Main {
 
   @Test
   public void test2() {
-    Assert.assertTrue(true, "Test 2 is fail");
+    Assert.assertTrue(false, "Test 2 is fail");
   }
 }
