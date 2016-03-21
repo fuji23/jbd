@@ -37,11 +37,9 @@ public class Main {
 
       driver = new JBrowserDriver();
       Reporter.log("Current env is " + env + " params " + param);
-/*
       driver.get("https://github.com/MachinePublishers/jBrowserDriver/issues");
 
       driver.findElements(By.xpath("//li//a[contains(@class, 'issue-title-link')]")).stream().map(WebElement::getText).forEach(System.out::println);
-*/
     } finally {
       driver.quit();
     }
