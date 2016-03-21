@@ -23,6 +23,8 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${xmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <disableXmlReport>true</disableXmlReport>
+                    <reportsDirectory>${user.dir}\report</reportsDirectory>
                 </configuration>
 
                 <executions>
